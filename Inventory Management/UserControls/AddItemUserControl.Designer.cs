@@ -353,6 +353,8 @@
             this.BoxOrderNum.Name = "BoxOrderNum";
             this.BoxOrderNum.Size = new System.Drawing.Size(226, 30);
             this.BoxOrderNum.TabIndex = 19;
+            this.BoxOrderNum.TextChanged += new System.EventHandler(this.BoxOrderNum_TextChanged);
+            this.BoxOrderNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BoxOrderNum_KeyDown);
             // 
             // label10
             // 

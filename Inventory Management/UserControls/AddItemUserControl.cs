@@ -163,5 +163,39 @@ namespace Inventory_Management
             }
             labelJob.Text = "Selected Job: " + jobName;
         }
+
+        private void BoxOrderNum_TextChanged(object sender, EventArgs e)
+        {
+            if (!(BoxOrderNum.Tag.ToString() == "backspace"))
+            {
+                switch (BoxOrderNum.TextLength)
+                {
+                    case 5:
+                    case 8:
+                        BoxOrderNum.AppendText("/");
+                        break;
+                }
+            }
+        }
+
+        private void BoxOrderNum_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                BoxOrderNum.Tag = "backspace";
+                switch (BoxOrderNum.TextLength)
+                {
+                    case 6:
+                    case 9:
+                        BoxOrderNum.Text = BoxOrderNum.Text.Substring(0, BoxOrderNum.TextLength - 1);
+                        BoxOrderNum.SelectionStart = BoxOrderNum.TextLength;
+                        break;
+                }
+            }
+            else
+            {
+                BoxOrderNum.Tag = "";
+            }
+        }
     }
 }

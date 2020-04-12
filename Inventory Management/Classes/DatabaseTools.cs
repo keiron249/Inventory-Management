@@ -170,6 +170,7 @@ namespace Inventory_Management
         {
             Cursor.Current = Cursors.WaitCursor;
             SqlConnection.Open();
+
             if (newSupplier)
             {
                 cmd = new SqlCommand("AddSupplier",SqlConnection);
