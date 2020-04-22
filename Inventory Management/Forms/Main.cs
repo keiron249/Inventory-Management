@@ -225,5 +225,10 @@ namespace Inventory_Management
         {
             LogOut();
         }
+
+        private void LabelName_Click(object sender, EventArgs e)
+        {
+            Idle_Tick(null, null);
+        }
     }
 }

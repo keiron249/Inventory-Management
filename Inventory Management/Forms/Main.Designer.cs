@@ -45,7 +45,7 @@
             this.PanelContent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PanelContent.Controls.Add(this.toolStrip1);
             this.PanelContent.Location = new System.Drawing.Point(0, 31);
-            this.PanelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelContent.Margin = new System.Windows.Forms.Padding(4);
             this.PanelContent.Name = "PanelContent";
             this.PanelContent.Size = new System.Drawing.Size(1067, 523);
             this.PanelContent.TabIndex = 0;
@@ -83,6 +83,7 @@
             this.LabelName.Size = new System.Drawing.Size(79, 29);
             this.LabelName.TabIndex = 1;
             this.LabelName.Text = "label1";
+            this.LabelName.Click += new System.EventHandler(this.LabelName_Click);
             // 
             // buttonLogOut
             // 
@@ -109,7 +110,7 @@
             this.Controls.Add(this.LabelName);
             this.Controls.Add(this.PanelContent);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";

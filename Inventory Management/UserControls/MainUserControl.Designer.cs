@@ -34,13 +34,13 @@
             this.ButtonSearch = new System.Windows.Forms.Button();
             this.buttonEdits = new System.Windows.Forms.Button();
             this.panelManagers = new System.Windows.Forms.Panel();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.buttonReports = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.buttonEmployee = new System.Windows.Forms.Button();
             this.panelManagers.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +121,21 @@
             this.panelManagers.Size = new System.Drawing.Size(326, 302);
             this.panelManagers.TabIndex = 4;
             // 
+            // buttonEmployee
+            // 
+            this.buttonEmployee.AutoSize = true;
+            this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
+            this.buttonEmployee.Location = new System.Drawing.Point(50, 201);
+            this.buttonEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(239, 50);
+            this.buttonEmployee.TabIndex = 6;
+            this.buttonEmployee.Text = "Add New Employee";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
+            // 
             // buttonReports
             // 
             this.buttonReports.AutoSize = true;
@@ -198,21 +213,6 @@
             this.buttonInsert.Text = "Insert New Item";
             this.buttonInsert.UseVisualStyleBackColor = true;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
-            // 
-            // buttonEmployee
-            // 
-            this.buttonEmployee.AutoSize = true;
-            this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.buttonEmployee.Location = new System.Drawing.Point(50, 201);
-            this.buttonEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(239, 50);
-            this.buttonEmployee.TabIndex = 6;
-            this.buttonEmployee.Text = "Add New Employee";
-            this.buttonEmployee.UseVisualStyleBackColor = true;
-            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // MainUserControl
             // 
