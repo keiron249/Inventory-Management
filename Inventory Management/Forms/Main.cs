@@ -23,8 +23,8 @@ namespace Inventory_Management
         {
             allowedClose = false;
             KeyPreview = true;
-            idle.Interval = 900000;
-            //idle.Interval = 10000; //Shorter interval for testing
+            //idle.Interval = 900000;
+            idle.Interval = 100; //Shorter interval for testing
             idle.Tick += Idle_Tick;
             userID = userid;
             InitializeComponent();
@@ -227,6 +227,11 @@ namespace Inventory_Management
         }
 
         private void LabelName_Click(object sender, EventArgs e)
+        {
+            Idle_Tick(null, null);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Idle_Tick(null, null);
         }
