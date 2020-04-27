@@ -24,7 +24,7 @@ namespace Inventory_Management
             allowedClose = false;
             KeyPreview = true;
             //idle.Interval = 900000;
-            idle.Interval = 100; //Shorter interval for testing
+            idle.Interval = 300000; //Shorter interval for testing
             idle.Tick += Idle_Tick;
             userID = userid;
             InitializeComponent();
@@ -40,7 +40,6 @@ namespace Inventory_Management
                 }
                 item.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
                 item.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
-
             }
         }
 
@@ -224,16 +223,6 @@ namespace Inventory_Management
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             LogOut();
-        }
-
-        private void LabelName_Click(object sender, EventArgs e)
-        {
-            Idle_Tick(null, null);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Idle_Tick(null, null);
         }
     }
 }

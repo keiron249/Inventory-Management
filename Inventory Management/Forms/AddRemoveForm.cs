@@ -60,6 +60,10 @@ namespace Inventory_Management.Forms
                         break;
                 }
             }
+            else
+            {
+                Submit();
+            }
         }
 
         private void Submit()

@@ -48,7 +48,7 @@
             this.BoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoxSearch.ForeColor = System.Drawing.SystemColors.GrayText;
             this.BoxSearch.Location = new System.Drawing.Point(297, 25);
-            this.BoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.BoxSearch.Multiline = true;
             this.BoxSearch.Name = "BoxSearch";
             this.BoxSearch.Size = new System.Drawing.Size(321, 36);
@@ -69,7 +69,7 @@
             this.gridResults.ContextMenuStrip = this.ItemStrip;
             this.gridResults.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gridResults.Location = new System.Drawing.Point(8, 84);
-            this.gridResults.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridResults.Margin = new System.Windows.Forms.Padding(4);
             this.gridResults.Name = "gridResults";
             this.gridResults.ShowEditingIcon = false;
             this.gridResults.Size = new System.Drawing.Size(1059, 330);
@@ -132,7 +132,7 @@
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonSearch.Image = global::Inventory_Management.Properties.Resources.Search;
             this.ButtonSearch.Location = new System.Drawing.Point(628, 25);
-            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.Size = new System.Drawing.Size(30, 30);
             this.ButtonSearch.TabIndex = 5;
@@ -177,7 +177,7 @@
             this.Controls.Add(this.gridResults);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.BoxSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchResultsUserControl";
             this.Size = new System.Drawing.Size(1067, 523);
             this.Load += new System.EventHandler(this.SearchResultsUserControl_Load);

@@ -135,7 +135,7 @@ namespace Inventory_Management
             Cursor.Current = Cursors.WaitCursor;
             SqlConnection.Open();
 
-            cmd = new SqlCommand("EditItem", SqlConnection);
+            cmd = new SqlCommand("CheckOrder", SqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@OrderID", orderID);
@@ -158,7 +158,14 @@ namespace Inventory_Management
             cmd.Parameters.AddWithValue("@Employee",Main.userID);
             cmd.Parameters.AddWithValue("@Item",itemID);
             cmd.Parameters.AddWithValue("@Type",type);
-            cmd.Parameters.AddWithValue("@Quantity",quantity);
+            if (quantity == null)
+            {
+                cmd.Parameters.AddWithValue("@Quantity", DBNull.Value);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+            }
 
             cmd.ExecuteNonQuery();
         }
@@ -199,7 +206,7 @@ namespace Inventory_Management
 
             cmd.ExecuteNonQuery();
 
-            addEdit(ItemID, amount, added ? 1 : 0);
+            addEdit(ItemID, added ? 1 : 0, amount);
 
             SqlConnection.Close();
             Cursor.Current = Cursors.Default;

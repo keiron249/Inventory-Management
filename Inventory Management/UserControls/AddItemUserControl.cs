@@ -95,23 +95,32 @@ namespace Inventory_Management
         private void AddItem()
         {
             Item item = new Item();
+            string orderID;
             item.ItemDescription = BoxName.Text;
             item.Location = BoxLocation.Text;
             item.Material = !BoxTool.Checked;
             item.QuantityStored = int.Parse(BoxQuantity.Text);
             item.UnitValue = float.Parse(BoxValue.Text);
             item.SupplierID = (int)comboSuppliers.SelectedValue;
+            if (BoxOrder.Checked)
+            {
+                orderID = BoxOrderNum.Text;
+            }
+            else
+            {
+                orderID = null;
+            }
             if (newSupplier)
             {
                 Supplier supplier = new Supplier();
                 supplier.Name = BoxSupplierName.Text;
                 supplier.Phone = BoxSupplierNumber.Text;
                 supplier.Website = BoxSupplierWebsite.Text;
-                DatabaseTools.addItem(item, true, supplier);
+                DatabaseTools.addItem(item, true, supplier, BoxOrderNum.Text);
             }
             else
             {
-                DatabaseTools.addItem(item, false);
+                DatabaseTools.addItem(item, false,null,BoxOrderNum.Text);
             }
             instance.Dispose();
             MessageBox.Show("ITEM ADDED SUCCESFULLY");

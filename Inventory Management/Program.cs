@@ -58,7 +58,6 @@ namespace Inventory_Management
         {
             if(days == -1)
             {
-                MessageBox.Show("Outputting report");
                 outputReport();
                 resetTimer();
             }
