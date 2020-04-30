@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory_Management
 {
-    enum actions
+    public enum actions
     {
         Main,
         Add,
@@ -15,7 +15,7 @@ namespace Inventory_Management
         Suppliers,
         ViewEdits
     }
-    class ActionStack
+    public class ActionStack
     {
         int front, length;
         actions[] list;

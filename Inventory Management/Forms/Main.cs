@@ -15,7 +15,7 @@ namespace Inventory_Management
     {
         public static string userID;
         private string name;
-        private ActionStack actionStack = new ActionStack(10);
+        public static ActionStack actionStack = new ActionStack(10);
         bool allowedClose;
         Timer idle = new Timer();
 
@@ -153,7 +153,7 @@ namespace Inventory_Management
 
         private void UpdateBackButton()
         {
-            if (actionStack.GetCount() == 0)
+            if (actionStack.IsEmpty())
             {
                 ButtonBack.Enabled = false;
             }

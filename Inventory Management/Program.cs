@@ -39,11 +39,17 @@ namespace Inventory_Management
             DateTime now = DateTime.Now;
             timeToMonth = (new DateTime(now.AddMonths(1).Year, now.AddMonths(1).Month, 1) - now);
 
-            int days = timeToMonth.Days;
+            days = timeToMonth.Days;
             timeToMonth.Subtract(new TimeSpan(days, 0, 0, 0));
 
-            monthTimer.Interval = new TimeSpan(1, 0, 0, 0).TotalMilliseconds;
-
+            if (days > 0)
+            {
+                monthTimer.Interval = new TimeSpan(1, 0, 0, 0).TotalMilliseconds;
+            }
+            else
+            {
+                monthTimer.Interval = timeToMonth.TotalMilliseconds;
+            }
             monthTimer.Start();
         }
 

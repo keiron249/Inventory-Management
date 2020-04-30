@@ -76,6 +76,12 @@
   <ItemGroup>
     <Compile Include="Classes\Item.cs" />
     <Compile Include="Classes\Supplier.cs" />
+    <Compile Include="Forms\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SelectJobForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="UserControls\ViewEditsUserControl.Designer.cs">
       <DependentUpon>ViewEditsUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectJobForm.resx">
       <DependentUpon>SelectJobForm.cs</DependentUpon>
     </EmbeddedResource>

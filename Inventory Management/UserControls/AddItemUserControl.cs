@@ -85,6 +85,10 @@ namespace Inventory_Management
                             break;
                     }
                 }
+                else
+                {
+                    AddItem();
+                }
             }
         }
 

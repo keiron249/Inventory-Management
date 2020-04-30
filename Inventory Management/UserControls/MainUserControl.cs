@@ -101,5 +101,11 @@ namespace Inventory_Management
         {
             System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Reports.xlsx");
         }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            Forms.AddEmployeeForm form = new Forms.AddEmployeeForm();
+            form.Show();
+        }
     }
 }

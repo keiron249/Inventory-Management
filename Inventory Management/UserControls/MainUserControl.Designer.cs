@@ -34,12 +34,13 @@
             this.ButtonSearch = new System.Windows.Forms.Button();
             this.buttonEdits = new System.Windows.Forms.Button();
             this.panelManagers = new System.Windows.Forms.Panel();
+            this.buttonReports = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.buttonReports = new System.Windows.Forms.Button();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.panelManagers.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.buttonEdits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdits.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.buttonEdits.Location = new System.Drawing.Point(67, 85);
+            this.buttonEdits.Location = new System.Drawing.Point(70, 85);
             this.buttonEdits.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEdits.Name = "buttonEdits";
             this.buttonEdits.Size = new System.Drawing.Size(199, 50);
@@ -110,21 +111,37 @@
             // panelManagers
             // 
             this.panelManagers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelManagers.Controls.Add(this.buttonEmployee);
             this.panelManagers.Controls.Add(this.buttonReports);
             this.panelManagers.Controls.Add(this.label1);
             this.panelManagers.Controls.Add(this.buttonEdits);
-            this.panelManagers.Location = new System.Drawing.Point(725, 97);
+            this.panelManagers.Location = new System.Drawing.Point(738, 142);
             this.panelManagers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelManagers.Name = "panelManagers";
             this.panelManagers.Size = new System.Drawing.Size(326, 302);
             this.panelManagers.TabIndex = 4;
+            // 
+            // buttonReports
+            // 
+            this.buttonReports.AutoSize = true;
+            this.buttonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
+            this.buttonReports.Location = new System.Drawing.Point(58, 143);
+            this.buttonReports.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonReports.Name = "buttonReports";
+            this.buttonReports.Size = new System.Drawing.Size(223, 50);
+            this.buttonReports.TabIndex = 5;
+            this.buttonReports.Text = "Open Reports File";
+            this.buttonReports.UseVisualStyleBackColor = true;
+            this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(52, 12);
+            this.label1.Location = new System.Drawing.Point(61, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 25);
             this.label1.TabIndex = 4;
@@ -182,20 +199,20 @@
             this.buttonInsert.UseVisualStyleBackColor = true;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
-            // buttonReports
+            // buttonEmployee
             // 
-            this.buttonReports.AutoSize = true;
-            this.buttonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.buttonReports.Location = new System.Drawing.Point(57, 143);
-            this.buttonReports.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonReports.Name = "buttonReports";
-            this.buttonReports.Size = new System.Drawing.Size(223, 50);
-            this.buttonReports.TabIndex = 5;
-            this.buttonReports.Text = "Open Reports File";
-            this.buttonReports.UseVisualStyleBackColor = true;
-            this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
+            this.buttonEmployee.AutoSize = true;
+            this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
+            this.buttonEmployee.Location = new System.Drawing.Point(50, 201);
+            this.buttonEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(239, 50);
+            this.buttonEmployee.TabIndex = 6;
+            this.buttonEmployee.Text = "Add New Employee";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // MainUserControl
             // 
@@ -232,5 +249,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonReports;
+        private System.Windows.Forms.Button buttonEmployee;
     }
 }

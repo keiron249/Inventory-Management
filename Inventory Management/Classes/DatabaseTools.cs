@@ -34,6 +34,43 @@ namespace Inventory_Management
             return data;
         }
 
+        internal static void AddEmployee(int ID, string name, bool manager)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            SqlConnection.Open();
+
+            cmd = new SqlCommand("AddEmployee", SqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ID", ID);
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Manager", manager);
+
+            cmd.ExecuteNonQuery();
+
+            SqlConnection.Close();
+            Cursor.Current = Cursors.Default;
+        }
+
+        internal static bool checkUserID(int ID)
+        {
+            bool result;
+            Cursor.Current = Cursors.WaitCursor;
+            SqlConnection.Open();
+
+            cmd = new SqlCommand("CheckID", SqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@ID", ID);
+            cmd.Parameters.Add("@ReturnValue", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+
+            cmd.ExecuteNonQuery();
+            result = Convert.ToBoolean(cmd.Parameters["@ReturnValue"].Value);
+
+            SqlConnection.Close();
+            Cursor.Current = Cursors.Default;
+            return result;
+        }
+
         public static int addSupplier(string name, string address, string postCode, DateTime endDate)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -85,6 +122,8 @@ namespace Inventory_Management
             cmd.Parameters.AddWithValue("@Location", item.Location);
 
             cmd.ExecuteNonQuery();
+
+            addEdit(item.ItemID, 2);
 
             SqlConnection.Close();
             Cursor.Current = Cursors.Default;
@@ -209,6 +248,8 @@ namespace Inventory_Management
 
                 cmd.ExecuteNonQuery();
             }
+
+            addEdit(ItemID, 3, item.QuantityStored);
 
             SqlConnection.Close();
             Cursor.Current = Cursors.Default;

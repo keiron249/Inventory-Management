@@ -37,10 +37,10 @@
             this.BoxOrderNum = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.labelJob = new System.Windows.Forms.Label();
-            this.JobButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dateOrder = new System.Windows.Forms.DateTimePicker();
             this.OrderLabel = new System.Windows.Forms.Label();
+            this.JobButton = new System.Windows.Forms.Button();
             this.panelOrder.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,22 +171,6 @@
             this.labelJob.TabIndex = 16;
             this.labelJob.Text = "No job selected";
             // 
-            // JobButton
-            // 
-            this.JobButton.AutoSize = true;
-            this.JobButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.JobButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.JobButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JobButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.JobButton.Location = new System.Drawing.Point(112, 147);
-            this.JobButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.JobButton.Name = "JobButton";
-            this.JobButton.Size = new System.Drawing.Size(117, 37);
-            this.JobButton.TabIndex = 16;
-            this.JobButton.Text = "Select Job";
-            this.JobButton.UseVisualStyleBackColor = true;
-            this.JobButton.Click += new System.EventHandler(this.JobButton_Click);
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -228,6 +212,22 @@
             this.OrderLabel.Size = new System.Drawing.Size(62, 25);
             this.OrderLabel.TabIndex = 13;
             this.OrderLabel.Text = "Order";
+            // 
+            // JobButton
+            // 
+            this.JobButton.AutoSize = true;
+            this.JobButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.JobButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.JobButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JobButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
+            this.JobButton.Location = new System.Drawing.Point(112, 147);
+            this.JobButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.JobButton.Name = "JobButton";
+            this.JobButton.Size = new System.Drawing.Size(117, 37);
+            this.JobButton.TabIndex = 16;
+            this.JobButton.Text = "Select Job";
+            this.JobButton.UseVisualStyleBackColor = true;
+            this.JobButton.Click += new System.EventHandler(this.JobButton_Click);
             // 
             // AddRemoveForm
             // 
@@ -272,9 +272,9 @@
         private System.Windows.Forms.TextBox BoxOrderNum;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelJob;
-        private System.Windows.Forms.Button JobButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateOrder;
         private System.Windows.Forms.Label OrderLabel;
+        private System.Windows.Forms.Button JobButton;
     }
 }

@@ -44,9 +44,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelContent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PanelContent.Controls.Add(this.toolStrip1);
-            this.PanelContent.Location = new System.Drawing.Point(0, 25);
+            this.PanelContent.Location = new System.Drawing.Point(0, 31);
+            this.PanelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(800, 425);
+            this.PanelContent.Size = new System.Drawing.Size(1067, 523);
             this.PanelContent.TabIndex = 0;
             // 
             // toolStrip1
@@ -56,7 +57,7 @@
             this.ButtonBack});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 31);
             this.toolStrip1.TabIndex = 0;
             // 
             // ButtonBack
@@ -76,9 +77,10 @@
             this.LabelName.AutoSize = true;
             this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.LabelName.Location = new System.Drawing.Point(3, -2);
+            this.LabelName.Location = new System.Drawing.Point(4, -2);
+            this.LabelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(60, 24);
+            this.LabelName.Size = new System.Drawing.Size(79, 29);
             this.LabelName.TabIndex = 1;
             this.LabelName.Text = "label1";
             // 
@@ -89,10 +91,10 @@
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogOut.Location = new System.Drawing.Point(724, -5);
-            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLogOut.Location = new System.Drawing.Point(965, -6);
+            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(76, 30);
+            this.buttonLogOut.Size = new System.Drawing.Size(92, 35);
             this.buttonLogOut.TabIndex = 1;
             this.buttonLogOut.Text = "Log Out";
             this.buttonLogOut.UseVisualStyleBackColor = true;
@@ -100,13 +102,14 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.LabelName);
             this.Controls.Add(this.PanelContent);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
