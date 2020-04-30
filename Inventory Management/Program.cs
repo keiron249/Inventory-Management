@@ -48,6 +48,7 @@ namespace Inventory_Management
             }
             else
             {
+                days = -1;
                 monthTimer.Interval = timeToMonth.TotalMilliseconds;
             }
             monthTimer.Start();
@@ -57,6 +58,7 @@ namespace Inventory_Management
         {
             if(days == -1)
             {
+                MessageBox.Show("Outputting report");
                 outputReport();
                 resetTimer();
             }
