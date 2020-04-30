@@ -169,21 +169,6 @@ namespace Inventory_Management
                     excelApp.Quit();
                 }
             }
-            MailReport();
-        }
-
-        private static void MailReport()
-        {
-            MailMessage message = new MailMessage(new MailAddress("keiron.appleyard@live.co.uk"), new MailAddress("keiron.appleyard@live.co.uk"));
-            message.Subject = "TEST";
-            message.Body = "This is a test email";
-            message.Attachments.Add(new Attachment(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Reports.xlsx"));
-            SmtpClient client = new SmtpClient("smtp-mail.outlook.com", 587);
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential("keiron.appleyard@live.co.uk", "tqmdngltxlyvervi");
-            client.EnableSsl = true;
-            client.Send(message);
         }
     }
 
